@@ -1,0 +1,20 @@
+{
+  "name": "shelter-in-place-games",
+  "version": "0.0.1",
+  "author": "Drew Walker",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "6.10.0",
+    "eslint-plugin-prettier": "3.1.2",
+    "prettier": "1.19.1",
+    "typescript": "3.8.3"
+  }
+}

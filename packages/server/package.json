@@ -1,0 +1,20 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "start": "node dist/index.js",
+    "lint": "eslint ."
+  },
+  "main": "index.js",
+  "author": "Drew Walker",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "2.11.0",
+    "graphql": "14.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.2",
+    "ts-node": "8.7.0"
+  }
+}
