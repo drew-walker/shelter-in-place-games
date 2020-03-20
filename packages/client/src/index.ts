@@ -1,7 +1,9 @@
+let html: string = "Hello webpack";
+
 function component() {
   const element = document.createElement("div");
 
-  element.innerHTML = "Hello webpack";
+  element.innerHTML = html;
 
   return element;
 }
