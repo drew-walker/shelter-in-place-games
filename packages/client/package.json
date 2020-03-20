@@ -1,0 +1,16 @@
+{
+  "name": "client",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --open",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+  },
+  "author": "Drew Walker",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "4.42.0",
+    "webpack-cli": "3.3.11",
+    "webpack-dev-server": "3.10.3"
+  }
+}
