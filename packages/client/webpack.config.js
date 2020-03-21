@@ -2,7 +2,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.ts",
+  entry: "./src/index.tsx",
   module: {
     rules: [
       {
@@ -15,5 +15,10 @@ module.exports = {
   resolve: {
     extensions: [".tsx", "ts", ".js"]
   },
-  plugins: [new HtmlWebpackPlugin()]
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "Shelter in place games",
+      template: "src/index.html"
+    })
+  ]
 };
