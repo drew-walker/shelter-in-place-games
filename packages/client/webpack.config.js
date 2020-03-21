@@ -17,7 +17,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Shelter in place games",
+      title: "Shelter-in-place games",
       template: "src/index.html"
     })
   ]
