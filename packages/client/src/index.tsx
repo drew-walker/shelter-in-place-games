@@ -1,8 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const MyComponent = () => {
-  return <div>Hello web</div>;
-};
+import { ShelterInPlace } from "./ShelterInPlace";
 
-ReactDOM.render(<MyComponent />, document.getElementById("root"));
+ReactDOM.render(<ShelterInPlace />, document.getElementById("root"));
