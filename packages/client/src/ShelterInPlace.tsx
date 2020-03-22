@@ -7,7 +7,6 @@ import { useHistory } from "./useHistory";
 
 export const ShelterInPlace = () => {
   const { currentLocation } = useHistory();
-
   return (
     <div style={{ display: "flex" }}>
       <div
