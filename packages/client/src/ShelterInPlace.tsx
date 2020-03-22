@@ -1,16 +1,28 @@
 import React from "react";
+import { Router, RouteComponentProps } from "@reach/router";
 
-import { N20, B500 } from "./colors";
+import { B500 } from "./colors";
 import HomeIcon from "@atlaskit/icon/glyph/home";
-
-import { useHistory } from "./useHistory";
 
 import { TicTacToe } from "./TicTacToe";
 import { Game } from "./Game";
+import { GameNavigation } from "./GameNavigation";
+
+const TicTacToeRoute: React.FunctionComponent<RouteComponentProps> = () => (
+  <Game title="Tic-tac-toe">
+    <TicTacToe />
+  </Game>
+);
+
+const CodebreakerRoute: React.FunctionComponent<RouteComponentProps> = () => (
+  <Game title="Codebreaker">Coming soon</Game>
+);
+
+const Home: React.FunctionComponent<RouteComponentProps> = () => (
+  <h2>Shelter-in-place games</h2>
+);
 
 export const ShelterInPlace: React.FunctionComponent = () => {
-  const { currentLocation } = useHistory();
-
   return (
     <div style={{ display: "flex" }}>
       <div
@@ -27,20 +39,13 @@ export const ShelterInPlace: React.FunctionComponent = () => {
           <HomeIcon label="home" />
         </a>
       </div>
-      <div style={{ backgroundColor: N20, width: 240 }}>
-        {currentLocation === "/tic-tac-toe" ? (
-          "Tic-tac-toe"
-        ) : (
-          <a href="/tic-tac-toe">Tic-tac-toe</a>
-        )}
-      </div>
+      <GameNavigation />
       <div style={{ width: 640, margin: "0 auto", padding: 20 }}>
-        {currentLocation === "/" && <h2>Shelter-in-place games</h2>}
-        {currentLocation === "/tic-tac-toe" && (
-          <Game title="Tic-tac-toe">
-            <TicTacToe />
-          </Game>
-        )}
+        <Router>
+          <Home path="/" />
+          <TicTacToeRoute path="/tic-tac-toe" />
+          <CodebreakerRoute path="/codebreaker" />
+        </Router>
       </div>
     </div>
   );
