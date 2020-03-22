@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --open",
+    "build": "webpack --mode production",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "author": "Drew Walker",
@@ -12,6 +13,7 @@
     "@types/react": "16.9.25",
     "@types/react-dom": "16.9.5",
     "html-webpack-plugin": "3.2.0",
+    "now": "17.0.4",
     "ts-loader": "6.2.1",
     "typescript": "3.8.3",
     "webpack": "4.42.0",
