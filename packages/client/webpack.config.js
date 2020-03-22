@@ -20,5 +20,8 @@ module.exports = {
       title: "Shelter-in-place games",
       template: "src/index.html"
     })
-  ]
+  ],
+  devServer: {
+    historyApiFallback: true
+  }
 };
