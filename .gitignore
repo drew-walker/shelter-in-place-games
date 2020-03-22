@@ -1,4 +1,5 @@
 .idea/
+.now/
 dist/
 node_modules/
 yarn-error.log

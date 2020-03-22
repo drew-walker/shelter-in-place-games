@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "author": "Drew Walker",
   "scripts": {
+    "dev": "yarn workspace client dev",
     "build": "yarn workspace client build",
     "lint": "yarn workspaces run lint"
   },

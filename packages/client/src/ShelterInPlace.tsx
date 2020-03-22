@@ -5,23 +5,25 @@ import HomeIcon from "@atlaskit/icon/glyph/home";
 
 import { useHistory } from "./useHistory";
 
-export const ShelterInPlace = () => {
-  const { currentLocation } = useHistory();
+import { TicTacToe } from "./TicTacToe";
+import { Game } from "./Game";
 
+export const ShelterInPlace: React.FunctionComponent = () => {
+  const { currentLocation } = useHistory();
 
   return (
     <div style={{ display: "flex" }}>
       <div
         style={{
           backgroundColor: B500,
-          width: 64,
+          width: 40,
           height: "100vh",
-          color: "#FFF",
-          padding: "16px 0",
-          alignItems: "center"
+          padding: "16px 12px",
+          alignItems: "center",
+          textAlign: "center"
         }}
       >
-        <a href="/">
+        <a href="/" style={{ color: "#FFF" }}>
           <HomeIcon label="home" />
         </a>
       </div>
@@ -30,6 +32,14 @@ export const ShelterInPlace = () => {
           "Tic-tac-toe"
         ) : (
           <a href="/tic-tac-toe">Tic-tac-toe</a>
+        )}
+      </div>
+      <div style={{ width: 640, margin: "0 auto", padding: 20 }}>
+        {currentLocation === "/" && <h2>Shelter-in-place games</h2>}
+        {currentLocation === "/tic-tac-toe" && (
+          <Game title="Tic-tac-toe">
+            <TicTacToe />
+          </Game>
         )}
       </div>
     </div>
